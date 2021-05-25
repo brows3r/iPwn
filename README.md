@@ -55,6 +55,26 @@ git clone https://github.com/0x1CA3/iSteal.git
 git clone https://github.com/0x1CA3/AutoEnum.git
 ```
 
+Ok, so now that we have everything installed, we can got into the 'iSteal' folder and run the 'iSteal' post-exploitation script.
+```
+python3 post.py
+```
+<!> NOTE: Make sure when you try running python files, you run it using "python3" instead of "python" or "py" <!>
+
+So now the script should be loaded, if you would like to use the 'help' command and look around, you may do so.
+![image](https://user-images.githubusercontent.com/78043996/119568186-3c95a800-bd7b-11eb-9e3c-55c0dcdbefe1.png)
+
+Now, we are going to use the 'list' command to show the available modules/options for post-exploitation.
+![image](https://user-images.githubusercontent.com/78043996/119568357-6b138300-bd7b-11eb-8508-7055d05a5490.png)
+
+<!> KEEP IN MIND: THERE WILL BE ALOT OF UPDATES ON THE POST-EXPLOITATION SCRIPT, AND MORE MODULES WILL BE ADDED, SO THIS IMAGE WILL BE UPDATED FOR THE SAKE OF BEING ACCURATE <!>
+
+To use a module, simply do 'use specific/module'. Example: use modules/list_installed_default_apps
+
+And as you can see, when we run that module, it shows us the installed default applications on the targets iOS device.
+![image](https://user-images.githubusercontent.com/78043996/119568907-0e649800-bd7c-11eb-9f11-895a0db41a5b.png)
+
+
 # Tested OS's
 ```
 Windows 10 - Stable
