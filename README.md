@@ -48,6 +48,7 @@ iPod 4th Gen
 # Screenshots
 ![image](https://user-images.githubusercontent.com/78043996/119547477-2845b100-bd63-11eb-96bb-f01106e833b6.png)
 ![image](https://user-images.githubusercontent.com/78043996/119548701-7909d980-bd64-11eb-9adf-774cc787586e.png)
+![image](https://user-images.githubusercontent.com/78043996/119549403-2aa90a80-bd65-11eb-9bcc-deaf87f405f9.png)
 
 # Credits
 [https://github.com/0x1CA3]
