@@ -92,6 +92,8 @@ type in the 'listen' command to start listening for incoming connections
 make sure that your victim runs the script via terminal or throught their own way, try social engineering, be creative!
 once the script is executed on the victims iOS device, you should get a connection
 install the important packages via transferring the 'post.sh' located in /post-exploitation and executing it, or manually do it yourself.
+you can now run the 'iSteal' or 'AutoEnum' post-exploitation tools
+have fun! :)
 ```
 <!> If you are doing step 2 and get stuck on the part where you have to install the important packages/tools, go into step 1 and copy the guide for installing the packages/tools! <!>
 
