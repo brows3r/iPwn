@@ -8,6 +8,29 @@ This project is still being worked on. I'm adding more extensions and options fo
 # Description/How to use [FOR NOOBIES!!!]
 iPwn is a framework meant for exploiting and and gaining access to iOS devices. It also has an extension that is a mini-framework called 'iSteal' that is meant for post-exploitation (after you get access to the device). This description will walk you through the different ways and steps to get access to an iOS device and harvest information from it.
 
+The first way of getting access to an iOS device. - SSH-Bruteforcing
+Most jailbroken iOS devices with Cydia come prepackaged with OpenSSH. And usually, the credentials are very weak or common, one of the most common passwords will be included in a wordlist that should be in your folder if you downloaded iPwn from my Github.
+
+So lets begin! So first off, we'll start by running the script.
+```
+python main.py
+```
+Then, we are going to type in the 'brute' command. (If you want to type help and get familiar with the commands, you may do so.)
+![image](https://user-images.githubusercontent.com/78043996/119564117-67313200-bd76-11eb-9acd-e80b952f138d.png)
+
+Once we type in the 'brute' command. Type in 'help' to display all the available commands.
+![image](https://user-images.githubusercontent.com/78043996/119564260-95167680-bd76-11eb-8adb-122e9455d47d.png)
+Now, we are going to use the 'default' command to start SSH-Bruteforcing with a wordlist containing the most common passwords.
+You will be asked to enter the targets IP address, please ensure you are entering the correct and vaild one, press enter, then move on with the next step.
+![image](https://user-images.githubusercontent.com/78043996/119564509-deff5c80-bd76-11eb-9df7-a58df14cb08e.png)
+
+<!> IF YOU ARE GETTING ERRORS, PLEASE MAKE SURE THAT HYDRA IS INSTALLED, YOU CAN INSTALL HYDRA WITH THE COMMANDS BELOW <!>
+```
+commands to install hydra:
+
+sudo apt install hydra
+sudo pacman -S hydra
+```
 # Tested OS's
 ```
 Windows 10 - Stable
