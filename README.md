@@ -44,7 +44,7 @@ Now we are logged in!
 At this point we probably want to gather some information on the phone and control it, that will come later. Because first, we need to install some very important things. If you want to use SCP to transfer the setup file that automates everything then you may do so. The file is in /post-exploitation/post.sh.
 Once you transfered the 'post.sh' file over to the iOS device, execute it by doing 'bash post.sh' and it should start installing and setting up the post exploitation tools that we will use.
 
-<!> NOTE: THIS NEXT SEGMENT WILL ONLY BE FOR THE PEOPLE THAT WANT TO INSTALL THE NECESSARY PACKAGES AND TOOLS MANUALLY <!>
+<!> NOTE: THE COMMANDS BELOW WILL ONLY BE FOR THE PEOPLE THAT WANT TO INSTALL THE NECESSARY PACKAGES AND TOOLS MANUALLY <!>
 ```
 run all these commands to setup/install everything thats needed:
 
