@@ -56,7 +56,7 @@ git clone https://github.com/0x1CA3/iSteal.git
 git clone https://github.com/0x1CA3/AutoEnum.git
 ```
 
-Ok, so now that we have everything installed, we can got into the 'iSteal' folder and run the 'iSteal' post-exploitation script.
+Ok, so now that we have everything installed, we can go into the 'iSteal' folder and run the 'iSteal' post-exploitation script.
 ```
 python3 post.py
 ```
