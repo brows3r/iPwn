@@ -78,7 +78,7 @@ And as you can see, when we run that module, it shows us the installed default a
 
 The second way to get access to an iOS device. - Reverse shell.
 
-Now, im going to show you have to do it the second way, which is a little more advanced. Keep in mind, I wont include pictures for this part.
+Now, im going to show you how to do it the second way, which is a little more advanced. Keep in mind, I wont include pictures for this part.
 ```
 run the iPwn framework by doing 'python main.py'
 type in the 'payload' command
