@@ -25,6 +25,17 @@ You will be asked to enter the targets IP address, please ensure you are enterin
 ![image](https://user-images.githubusercontent.com/78043996/119564509-deff5c80-bd76-11eb-9df7-a58df14cb08e.png)
 
 <!> IF YOU ARE GETTING ERRORS, PLEASE MAKE SURE THAT HYDRA IS INSTALLED, YOU CAN INSTALL HYDRA WITH THE COMMANDS BELOW <!>
+
+Now back to the tutorial, if you have hydra installed on your PC, it should already be attempting to bruteforce. Just sit tight for about 20-40 seconds and if the device does use the default/common credentails supplied in the wordlist, then Hydra should give you a little message that shows the correct password.
+![image](https://user-images.githubusercontent.com/78043996/119565382-deb39100-bd77-11eb-9081-c0a500acbf65.png)
+
+As we can see, the correct password is 'alpine'. Now we can login into the phone by doing 'ssh root@ip_goes_here' on another terminal window. Once it prompts you for a password just enter in the password you got from Hydra.
+![image](https://user-images.githubusercontent.com/78043996/119565646-35b96600-bd78-11eb-9602-09de842470b1.png)
+
+Now we are logged in!
+![image](https://user-images.githubusercontent.com/78043996/119565745-54b7f800-bd78-11eb-864e-60e569ab4dbc.png)
+
+At this point we probably want to gather some information on the phone and control it, that will come later. Because first, we need to install some very important things.
 ```
 commands to install hydra:
 
