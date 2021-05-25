@@ -1,8 +1,11 @@
 # iPwn
 A Framework meant for the exploitation of iOS devices.
 
-# Description
+# Status - ❌
+This project is still being worked on. I'm adding more extensions and options for post-exploitation for harvesting Device information and other things.
 
+# Description
+Description coming soon
 # Tested OS's
 ```
 Windows 10 - Stable
@@ -41,6 +44,6 @@ iPod 4th Gen
 ```
 
 # Screenshots
-
+Screenshots coming soon.
 # Credits
 [https://github.com/0x1CA3]
