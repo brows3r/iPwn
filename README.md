@@ -8,7 +8,8 @@ This project is still being worked on. I'm adding more extensions and options fo
 # Description/How to use [FOR NOOBIES!!!]
 iPwn is a framework meant for exploiting and and gaining access to iOS devices. It also has an extension that is a mini-framework called 'iSteal' that is meant for post-exploitation (after you get access to the device). This description will walk you through the different ways and steps to get access to an iOS device and harvest information from it.
 
-The first way of getting access to an iOS device. - SSH-Bruteforcing
+The first way of getting access to an iOS device. - SSH-Bruteforcing.
+
 Most jailbroken iOS devices with Cydia come prepackaged with OpenSSH. And usually, the credentials are very weak or common, one of the most common passwords will be included in a wordlist that should be in your folder if you downloaded iPwn from my Github.
 
 So lets begin! So first off, we'll start by running the script.
