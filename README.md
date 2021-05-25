@@ -51,5 +51,8 @@ iPod 4th Gen
 ![image](https://user-images.githubusercontent.com/78043996/119549700-7f4c8580-bd65-11eb-8131-0f261883df45.png)
 ![image](https://user-images.githubusercontent.com/78043996/119549828-a3a86200-bd65-11eb-831e-5de71ea65323.png)
 
+# Update logs
+[5/25/21] - Added 2 extra modules for the 'iSteal' post-exploitation tool.
+
 # Credits
 [https://github.com/0x1CA3]
