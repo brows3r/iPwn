@@ -160,6 +160,7 @@ iPod 4th Gen
 
 # Update logs
 [5/25/21] - Added 8 extra modules for the 'iSteal' post-exploitation tool.
+
 [5/25/21] - Added 2 extra modules for the 'iSteal' post-exploitation tool.
 
 # Credits
