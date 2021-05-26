@@ -201,7 +201,7 @@ def mainshell():
         elif maininput == "commnad" or maininput == "comand" or maininput == "commad" or maininput == "comad":
             subprocess.call(helpcom.displayz["commad"], shell=True)
         elif maininput == "litsen" or maininput == "listne" or maininput == "litens":
-            subprocess.call(commandz.commandz[""], shell=True)
+            subprocess.call(commandz.commandz["listenn"], shell=True)
         else:
             print(f"Command [{maininput}] was not found.")
 
