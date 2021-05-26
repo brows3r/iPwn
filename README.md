@@ -66,7 +66,7 @@ So now the script should be loaded, if you would like to use the 'help' command 
 ![image](https://user-images.githubusercontent.com/78043996/119568186-3c95a800-bd7b-11eb-9e3c-55c0dcdbefe1.png)
 
 Now, we are going to use the 'list' command to show the available modules/options for post-exploitation.
-![image](https://user-images.githubusercontent.com/78043996/119568357-6b138300-bd7b-11eb-8508-7055d05a5490.png)
+![image](https://user-images.githubusercontent.com/78043996/119593903-d45dbb00-bda8-11eb-9dda-3f59b25b98b6.png)
 
 <!> KEEP IN MIND: THERE WILL BE ALOT OF UPDATES ON THE POST-EXPLOITATION SCRIPT, AND MORE MODULES WILL BE ADDED, SO THIS IMAGE WILL BE UPDATED FOR THE SAKE OF BEING ACCURATE <!>
 
