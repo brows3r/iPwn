@@ -97,6 +97,23 @@ have fun! :)
 ```
 <!> If you are doing step 2 and get stuck on the part where you have to install the important packages/tools, go into step 1 and copy the guide for installing the packages/tools! <!>
 
+# File transfer/Extraction
+There's multiple ways to transfer files to the iOS device and there's also lots of ways to download them. The easiest way to extract and download files from the iOS device is to use Curl and a discord webhook.
+
+<!> NOTE: The segment below will demonstrate how to extract and download files from the iOS device using curl <!>
+
+```
+Step 1: Create a discord server
+Step 2: Create a webhook and copy the link
+Step 3: On the iOS device, navigate towards the directory that contains the file you want to retrieve.
+Step 4: enter the command below (replace file_here.txt with the name of your file, replace webhook_url_here with your webhook url)
+
+curl -i -H 'Expect: application/json' -F file=@file_here.txt -F 'payload_json={ "wait": true, "content": "", "username": "" }' webhook_url_here
+
+Step 5: wait around 10-50 seconds
+Done! The file should now be uploaded to your discord server. You can now download/view the file.
+```
+
 # Tested OS's
 ```
 Windows 10 - Stable
