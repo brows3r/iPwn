@@ -2,6 +2,7 @@
 A Framework meant for the exploitation of iOS devices.
 ![image](https://user-images.githubusercontent.com/78043996/119547132-ba00ee80-bd62-11eb-989a-1b9522ca6bd4.png)
 
+<!> REMEMBER: THE IPHONE YOU ARE ATTEMPTING TO GET INTO USING THIS TOOL MUST BE JAILBROKEN <!>
 # Status - ❌
 This project is still being worked on. I'm adding more extensions and options for post-exploitation for harvesting Device information and other things. Im also working on a way to put a payload in a normal iOS tweak so that getting a reverse shell can be easier.
 
