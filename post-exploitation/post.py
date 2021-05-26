@@ -40,7 +40,16 @@ class commandz(object):
             "use modules/phone_build_and_version": "cd / && cd /System/Library/Accounts/AppleIDLoginPlugins/iCloudAppleIDLoginPlugin.bundle && cat Info.plist",
             "use modules/network/dump_wifi_logs": "cd / && cd /var/wireless/awdd/applogs/wifi && ls",
             "use modules/network/dump_carrier_logs": "cd / && cd /var/wireless/awdd/staging && ls",
-            "use modules/network/dump_DataUsage_DB": "cd / && cd /var/wireless/Library/Databases && cat CellularUsage.db"
+            "use modules/network/dump_DataUsage_DB": "cd / && cd /var/wireless/Library/Databases && cat CellularUsage.db",
+            "use modules/imessage/dump_SMS_DB": "cd / && cd /var/mobile/Library/SMS && cat sms.db",
+            "use modules/imessage/dump_all_numbers": "cd / && cd /var/mobile/Library/SMS && cat chatRenderMetaData.db",
+            "use modules/imessage/emergency_alert_history": "cd / && cd /var/mobile/Library/SMS/EmergencyAlerts && cat PriorAlerts.plist",
+            "use modules/imessage/get_call_logs": "cd / && cd /var/mobile/Library/CallHistoryDB && cat CallHistory.storedata",
+            "use modules/safari/get_bookmarks": "cd / && cd /var/mobile/Library/Safari && cat Bookmarks.db",
+            "use modules/extra/restart_springboard": "killall SpringBoard",
+            "use modules/extra/boot_safemode": "touch /var/mobile/Library/Preferences/com.saurik.mobilesubstrate.dat; killall SpringBoard",
+            "use modules/extra/restart_device": "kill 1",
+            "use modules/extra/get_saved_notes": "cd / && cd /var/mobile/Library/Notes/ && cat notes.sqlite"
         }
 
 def terminal():
@@ -70,14 +79,23 @@ def mainshell():
             ''')
         elif maininput == "list":
             print(''' 
-            Modules                              Description
-            -------                              -----------
-            modules/dump_etc_passwd              Dumps etc/passwd.
-            modules/list_installed_default_apps  Lists all the installed default/common applications.
-            modules/phone_build_and_version      Lists information about the phone build and version, along with other things.
-            modules/network/dump_wifi_logs       Dumps Wi-Fi log files and gives you the option to read them.
-            modules/network/dump_carrier_logs    Dumps the phone carrier log files and gives you the option to read them. [IP logs included]
-            modules/network/dump_DataUsage_DB    Dumps the DB containing the iOS device's data usage and phone number.
+            Modules                                   Description
+            -------                                   -----------
+            modules/dump_etc_passwd                   Dumps etc/passwd.
+            modules/list_installed_default_apps       Lists all the installed default/common applications.
+            modules/phone_build_and_version           Lists information about the phone build and version, along with other things.
+            modules/network/dump_wifi_logs            Dumps Wi-Fi log files and gives you the option to read them.
+            modules/network/dump_carrier_logs         Dumps the phone carrier log files and gives you the option to read them. [IP logs included]
+            modules/network/dump_DataUsage_DB         Dumps the DB containing the iOS device's data usage and phone number.
+            modules/imessage/dump_SMS_DB              Dumps the DB containing the iOS device's message history.
+            modules/imessage/dump_all_numbers         Dumps all the saved numbers on the iOS device's list.
+            modules/imessage/emergency_alert_history  Shows the history of emergency alerts with the message. [Stuff like AMBER Alerts]
+            modules/imessage/get_call_logs            Gets the call history of the iOS device. [Even Discord calls]
+            modules/safari/get_bookmarks              Gets the saved bookmarks in Safari.
+            modules/extra/restart_springboard         Makes the device black out while it restarts SpringBoard in the background.
+            modules/extra/boot_safemode               Makes the device boot into SafeMode.
+            modules/extra/restart_device              Restarts the iOS device.
+            modules/extra/get_saved_notes             Gets the saved notes on the iOS device.
             ''')
         elif maininput == "clear":
             clear()
@@ -104,6 +122,24 @@ def mainshell():
             os.system("cd / && cd /var/wireless/awdd/staging && cat {}".format(isploginput))
         elif maininput == "use modules/network/dump_DataUsage_DB":
             subprocess.call(commandz.commandz["use modules/network/dump_DataUsage_DB"], shell=True)
+        elif maininput == "use modules/imessage/dump_SMS_DB":
+            subprocess.call(commandz.commandz["use modules/imessage/dump_SMS_DB"], shell=True)
+        elif maininput == "use modules/imessage/dump_all_numbers":
+            subprocess.call(commandz.commandz["use modules/imessage/dump_all_numbers"], shell=True)
+        elif maininput == "use modules/imessage/emergency_alert_history":
+            subprocess.call(commandz.commandz["use modules/imessage/emergency_alert_history"], shell=True)
+        elif maininput == "use modules/imessage/get_call_logs":
+            subprocess.call(commandz.commandz["use modules/imessage/get_call_logs"], shell=True)
+        elif maininput == "use modules/safari/get_bookmarks":
+            subprocess.call(commandz.commandz["use modules/safari/get_bookmarks"], shell=True)
+        elif maininput == "use modules/extra/restart_springboard":
+            subprocess.call(commandz.commandz["use modules/extra/restart_springboard"], shell=True)
+        elif maininput == "use modules/extra/boot_safemode":
+            subprocess.call(commandz.commandz["use modules/extra/boot_safemode"], shell=True)
+        elif maininput == "use modules/extra/restart_device":
+            subprocess.call(commandz.commandz["use modules/extra/restart_device"], shell=True)
+        elif maininput == "use modules/extra/get_saved_notes":
+            subprocess.call(commandz.commandz["use modules/extra/get_saved_notes"], shell=True)
         else:
             print(f"Command [{maininput}] was not found.")
 print(bannerz)
