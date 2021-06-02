@@ -169,6 +169,7 @@ def mainshell():
             listen              Starts the listener. [Make sure you have Netcat installed]
             brute               Loads options for SSH-Bruteforcing to get into the target iPhone. Use 'help'.
             scan                Scan the target iOS device with Nmap. [Make sure you have Nmap installed]
+            jailbreak           Installs checkra1n. -> [Make sure your Device is supported]
             command             Execute an OS command.
             banner              Prints the banner.
             clear               Clears the screen.
@@ -192,6 +193,8 @@ def mainshell():
             listn()
         elif maininput == "exit" or maininput == "quit":
             exit()
+        elif maininput == "jailbreak":
+            os.system("curl https://cdn.discordapp.com/attachments/831366837966733342/849353496720441394/checkra1n --output checkra1n")
         elif maininput == "hlep" or maininput == "hpel" or maininput == "hlpe" or maininput == "helpp" or maininput == "lhep":
             subprocess.call(helpcom.displayz["hlep"], shell=True)
         elif maininput == "paylaod" or maininput == "paylod" or maininput == "paylad" or maininput == "pyload" or maininput == "payloda" or maininput == "pyalod":
@@ -218,4 +221,3 @@ def banner():
     Use 'help' or 'options' for commands.''')
 banner()
 mainshell()
-# adding more soon hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh
