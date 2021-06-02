@@ -6,6 +6,13 @@ A Framework meant for the exploitation of iOS devices.
 # Status - ❌
 This project is still being worked on. I'm adding more extensions and options for post-exploitation for harvesting Device information and other things. Im also working on a way to put a payload in a normal iOS tweak so that getting a reverse shell can be easier.
 
+# Update logs
+[6/2/21] - Added 4 extra modules for the 'iSteal' post-exploitation tool.
+
+[5/25/21] - Added 8 extra modules for the 'iSteal' post-exploitation tool.
+
+[5/25/21] - Added 2 extra modules for the 'iSteal' post-exploitation tool.
+
 # Description/How to use [FOR NOOBIES!!!]
 iPwn is a framework meant for exploiting and and gaining access to iOS devices. It also has an extension that is a mini-framework called 'iSteal' that is meant for post-exploitation (after you get access to the device). This description will walk you through the different ways and steps to get access to an iOS device and harvest information from it.
 
@@ -157,11 +164,6 @@ iPod 4th Gen
 ![image](https://user-images.githubusercontent.com/78043996/119548701-7909d980-bd64-11eb-9adf-774cc787586e.png)
 ![image](https://user-images.githubusercontent.com/78043996/119549700-7f4c8580-bd65-11eb-8131-0f261883df45.png)
 ![image](https://user-images.githubusercontent.com/78043996/119549828-a3a86200-bd65-11eb-831e-5de71ea65323.png)
-
-# Update logs
-[5/25/21] - Added 8 extra modules for the 'iSteal' post-exploitation tool.
-
-[5/25/21] - Added 2 extra modules for the 'iSteal' post-exploitation tool.
 
 # Credits
 [https://github.com/0x1CA3]
