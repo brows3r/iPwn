@@ -160,13 +160,19 @@ def listn():
         os.system("nc -lvp {}".format(listninput))
 
 # physical tools
+def check_online():
+    device = usb.core.find(idVendor=0x5AC, idProduct=0x12a8)
+    if device is None:
+        raise ValueError("Your iOS device is not connected!")
+    else:
+        print("Device is connected! [0x5AC, 0x12A8]")
 
 def dfu():
     dev = usb.core.find(idVendor=0x5AC, idProduct=0x1227)
     if dev is None:
-        raise ValueError("Your iOS device is not connected!")
+        raise ValueError("Your iOS device is not connected in DFU mode!")
     else:
-        print("Device is connected!")
+        print("Device is connected in DFU! [0x5AC, 0x1227]")
 
 #physical tools end
 
@@ -178,15 +184,21 @@ def phy():
             Commands               Description
             --------               -----------
             help                   Displays available commands.
+            pair                   Pair your iOS device with your computer.
+            online_check           Checks if the iOS device is connected to the computer.
             dfu_check              Checks if the iOS device is in DFU mode.
             jailbreak              Installs checkra1n. -> [Make sure your iOS device is supported]
             clear                  Clears the screen.
             back                   Goes back to the main menu.
             ''')
+        elif phy == "online_check":
+            check_online()
         elif phy == "dfu_check":
             dfu()
         elif phy == "jailbreak":
             os.system("curl https://cdn.discordapp.com/attachments/831366837966733342/849353496720441394/checkra1n --output checkra1n")
+        elif phy == "pair":
+            os.system("idevicepair pair")
         elif phy == "clear":
             clear()
         elif phy == "back":
@@ -206,7 +218,7 @@ def mainshell():
             listen              Starts the listener. [Make sure you have Netcat installed]
             brute               Loads options for SSH-Bruteforcing to get into the target iPhone. Use 'help'.
             scan                Scan the target iOS device with Nmap. [Make sure you have Nmap installed]
-            tools               Loads options for 
+            tools               Loads options for tinkering with iOS devices you have physical access to.
             command             Execute an OS command.
             banner              Prints the banner.
             clear               Clears the screen.
