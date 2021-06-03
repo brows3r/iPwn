@@ -60,7 +60,7 @@ Once you transfered the 'post.sh' file over to the iOS device, execute it by doi
 run all these commands to setup/install everything thats needed:
 
 apt install netcat
-apt install python
+apt install python3
 apt install nano
 git clone https://github.com/0x1CA3/iSteal.git
 ```
