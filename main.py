@@ -1,5 +1,6 @@
 try:
     import os
+    import usb
     import socket
     import platform
     import usb.core
