@@ -7,6 +7,8 @@ A Framework meant for the exploitation of iOS devices.
 This project is still being worked on. I'm adding more extensions and options for post-exploitation for harvesting Device information and other things. Im also working on a way to put a payload in a normal iOS tweak so that getting a reverse shell can be easier.
 
 # Update logs
+[6/2/21] - Added an extra menu for people that have their devices connected to their computer and want to tinker with them.
+
 [6/2/21] - Added 4 extra modules for the 'iSteal' post-exploitation tool. Also added an option to install the checkra1n jailbreak.
 
 [5/25/21] - Added 8 extra modules for the 'iSteal' post-exploitation tool.
