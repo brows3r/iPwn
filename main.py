@@ -2,6 +2,7 @@ try:
     import os
     import socket
     import platform
+    import usb.core
     import subprocess
     from time import sleep
 except:
@@ -49,7 +50,7 @@ class helpcom(object):
 
 def sshh():
     while True:
-        sshhinput = input("\n╭─user@ipwn [/ssh/brute]\n╰─$ ")
+        sshhinput = input("\n╭─user@ipwn [ssh/brute]\n╰─$ ")
         if sshhinput == "help" or sshhinput == "options":
             print(''' 
             Commands            Description            
@@ -157,6 +158,41 @@ def listn():
     else:
         os.system("nc -lvp {}".format(listninput))
 
+# physical tools
+
+def dfu():
+    dev = usb.core.find(idVendor=0x5AC, idProduct=0x1227)
+    if dev is None:
+        raise ValueError("Your iOS device is not connected!")
+    else:
+        print("Device is connected!")
+
+#physical tools end
+
+def phy():
+    while True:
+        phy = input("\n╭─user@ipwn [physical/ios/tools]\n╰─$ ")
+        if phy == "help" or phy == "options":
+            print(''' 
+            Commands               Description
+            --------               -----------
+            help                   Displays available commands.
+            dfu_check              Checks if the iOS device is in DFU mode.
+            jailbreak              Installs checkra1n. -> [Make sure your iOS device is supported]
+            clear                  Clears the screen.
+            back                   Goes back to the main menu.
+            ''')
+        elif phy == "dfu_check":
+            dfu()
+        elif phy == "jailbreak":
+            os.system("curl https://cdn.discordapp.com/attachments/831366837966733342/849353496720441394/checkra1n --output checkra1n")
+        elif phy == "clear":
+            clear()
+        elif phy == "back":
+            mainshell()
+        else:
+            print(f"Command [{phy}] was not found.")
+
 def mainshell():
     while True:
         maininput = input("\n╭─user@ipwn\n╰─$ ")
@@ -169,7 +205,7 @@ def mainshell():
             listen              Starts the listener. [Make sure you have Netcat installed]
             brute               Loads options for SSH-Bruteforcing to get into the target iPhone. Use 'help'.
             scan                Scan the target iOS device with Nmap. [Make sure you have Nmap installed]
-            jailbreak           Installs checkra1n. -> [Make sure your Device is supported]
+            tools               Loads options for 
             command             Execute an OS command.
             banner              Prints the banner.
             clear               Clears the screen.
@@ -191,10 +227,10 @@ def mainshell():
             payloadss()
         elif maininput == "listen":
             listn()
+        elif maininput == "tools":
+            phy()
         elif maininput == "exit" or maininput == "quit":
             exit()
-        elif maininput == "jailbreak":
-            os.system("curl https://cdn.discordapp.com/attachments/831366837966733342/849353496720441394/checkra1n --output checkra1n")
         elif maininput == "hlep" or maininput == "hpel" or maininput == "hlpe" or maininput == "helpp" or maininput == "lhep":
             subprocess.call(helpcom.displayz["hlep"], shell=True)
         elif maininput == "paylaod" or maininput == "paylod" or maininput == "paylad" or maininput == "pyload" or maininput == "payloda" or maininput == "pyalod":
